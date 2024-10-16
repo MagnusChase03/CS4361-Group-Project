@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://fp2fa8rgba4r"]
+
+[ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_2y75y"]
+[ext_resource type="ArrayMesh" uid="uid://bsj4kvynt7cpv" path="res://Assets/Obj/planet.obj" id="1_bo8kb"]
+[ext_resource type="Material" uid="uid://chrvkxonuywfb" path="res://Assets/Materials/Mars.tres" id="1_uy4al"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_17n5q"]
+radius = 1.02081
+
+[node name="Mars" type="CharacterBody3D"]
+script = ExtResource("1_2y75y")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_uy4al")
+mesh = ExtResource("1_bo8kb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_17n5q")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
