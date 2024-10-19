@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2rg4wcl5ijjm"
-path.s3tc="res://.godot/imported/MarsNormal.png-2f577e32d83a347f91b19d25494e62f7.s3tc.ctex"
+uid="uid://b1g2celuv7l6j"
+path.s3tc="res://.godot/imported/T_Mars_Nomral.png-a6d9a3d55e9d65d535c112fb521cb925.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/MarsNormal.png"
-dest_files=["res://.godot/imported/MarsNormal.png-2f577e32d83a347f91b19d25494e62f7.s3tc.ctex"]
+source_file="res://Assets/Textures/T_Mars_Nomral.png"
+dest_files=["res://.godot/imported/T_Mars_Nomral.png-a6d9a3d55e9d65d535c112fb521cb925.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Assets/Textures/MarsNormal.png"
+roughness/src_normal="res://Assets/Textures/T_Mars_Nomral.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
