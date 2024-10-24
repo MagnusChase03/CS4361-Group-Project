@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="cometman"
-run/main_scene="res://Scenes/Mars.tscn"
+config/name="CSProject"
+run/main_scene="res://level_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
