@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctvw7f0oktpfe"]
+
+[ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_cxqcu"]
+[ext_resource type="Material" uid="uid://km1ewcbln0vg" path="res://Assets/Materials/Neptune.tres" id="2_w8kpo"]
+[ext_resource type="ArrayMesh" uid="uid://mnnhmdds8snp" path="res://Assets/Obj/Neptune.obj" id="3_owrkf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_17n5q"]
+radius = 1.02081
+
+[node name="Neptune" type="CharacterBody3D"]
+script = ExtResource("1_cxqcu")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_w8kpo")
+mesh = ExtResource("3_owrkf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_17n5q")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
