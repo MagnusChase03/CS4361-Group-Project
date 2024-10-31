@@ -1,1 +1,3 @@
-# CS4361-Group-Project
+# Comentman
+
+*3D UTD themed Pacman game using Godot.*
