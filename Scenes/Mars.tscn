@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://fp2fa8rgba4r"]
 
 [ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_2y75y"]
-[ext_resource type="ArrayMesh" uid="uid://bsj4kvynt7cpv" path="res://Assets/Obj/planet.obj" id="1_bo8kb"]
-[ext_resource type="Material" uid="uid://chrvkxonuywfb" path="res://Assets/Materials/Mars.tres" id="1_uy4al"]
+[ext_resource type="Material" uid="uid://bpt7ux2l1eoo3" path="res://Assets/Materials/Mars.tres" id="2_u4aiq"]
+[ext_resource type="ArrayMesh" uid="uid://c7fl2wnsa0ylq" path="res://Assets/Obj/Mars.obj" id="3_0mc3g"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_17n5q"]
 radius = 1.02081
@@ -12,8 +12,8 @@ script = ExtResource("1_2y75y")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-material_override = ExtResource("1_uy4al")
-mesh = ExtResource("1_bo8kb")
+material_override = ExtResource("2_u4aiq")
+mesh = ExtResource("3_0mc3g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_17n5q")

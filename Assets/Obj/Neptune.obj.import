@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mnnhmdds8snp"
+path="res://.godot/imported/Neptune.obj-ee76bba5b38f9f75d69a7464b56aceaf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Neptune.obj-ee76bba5b38f9f75d69a7464b56aceaf.mesh"]
+
+source_file="res://Assets/Obj/Neptune.obj"
+dest_files=["res://.godot/imported/Neptune.obj-ee76bba5b38f9f75d69a7464b56aceaf.mesh", "res://.godot/imported/Neptune.obj-ee76bba5b38f9f75d69a7464b56aceaf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

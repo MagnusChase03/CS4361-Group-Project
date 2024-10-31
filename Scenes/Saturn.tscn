@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfivequ7xjtjv"]
+
+[ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_wfi7s"]
+[ext_resource type="ArrayMesh" uid="uid://bdrv3ct8ex2nl" path="res://Assets/Obj/Saturn.obj" id="2_3lbms"]
+[ext_resource type="Material" uid="uid://bxidqyjfa6mwm" path="res://Assets/Materials/Saturn.tres" id="2_t5i14"]
+[ext_resource type="ArrayMesh" uid="uid://dkspkg1g82yrt" path="res://Assets/Obj/SaturnRings.obj" id="4_e7tgo"]
+[ext_resource type="Material" uid="uid://d288ny6p8rcco" path="res://Assets/Materials/SaturnRings.tres" id="4_mj0lk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_17n5q"]
+radius = 1.02081
+
+[node name="Saturn" type="CharacterBody3D"]
+script = ExtResource("1_wfi7s")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_t5i14")
+mesh = ExtResource("2_3lbms")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+material_override = ExtResource("4_mj0lk")
+mesh = ExtResource("4_e7tgo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_17n5q")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

@@ -1,7 +1,9 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://chrvkxonuywfb"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bpt7ux2l1eoo3"]
 
-[ext_resource type="Texture2D" uid="uid://c62ey87b7kcou" path="res://Assets/Textures/Mars.png" id="1_jn6x0"]
+[ext_resource type="Texture2D" uid="uid://wf1i136x8pm8" path="res://Assets/Textures/T_Mars_ColorMap.png" id="1_vb8dh"]
+[ext_resource type="Texture2D" uid="uid://b1g2celuv7l6j" path="res://Assets/Textures/T_Mars_Nomral.png" id="2_syskv"]
 
 [resource]
-albedo_texture = ExtResource("1_jn6x0")
-uv1_scale = Vector3(5, 5, 5)
+albedo_texture = ExtResource("1_vb8dh")
+normal_enabled = true
+normal_texture = ExtResource("2_syskv")

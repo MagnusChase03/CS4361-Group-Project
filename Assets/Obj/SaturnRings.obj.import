@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkspkg1g82yrt"
+path="res://.godot/imported/SaturnRings.obj-0554b8c43c673f467bb0fe2fe5c12950.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SaturnRings.obj-0554b8c43c673f467bb0fe2fe5c12950.mesh"]
+
+source_file="res://Assets/Obj/SaturnRings.obj"
+dest_files=["res://.godot/imported/SaturnRings.obj-0554b8c43c673f467bb0fe2fe5c12950.mesh", "res://.godot/imported/SaturnRings.obj-0554b8c43c673f467bb0fe2fe5c12950.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
