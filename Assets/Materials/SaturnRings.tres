@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d288ny6p8rcco"]
+
+[ext_resource type="Texture2D" uid="uid://b0ebdf5odhgtj" path="res://Assets/Textures/T_Saturn_Rings_ColorMap.png" id="1_firvy"]
+[ext_resource type="Texture2D" uid="uid://dgeflej1fs1fw" path="res://Assets/Textures/T_Saturn_Rings_Normal.png" id="2_opmni"]
+
+[resource]
+albedo_texture = ExtResource("1_firvy")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_opmni")
