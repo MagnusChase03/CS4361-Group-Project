@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc070y87hjr30"]
+
+[ext_resource type="Script" path="res://Scripts/CometMan.gd" id="1_16l6y"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_m7bsr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m446e"]
+radius = 0.6
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q6ujo"]
+radius = 0.55
+
+[node name="CometMan" type="CharacterBody3D"]
+collision_mask = 14
+script = ExtResource("1_16l6y")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_m7bsr")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 14
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_m446e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_q6ujo")
+
+[node name="PowerUpTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="PowerUpTimer" to="." method="_on_power_up_timer_timeout"]

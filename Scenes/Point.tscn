@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1v3fp6ua8m5c"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xfs77"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bbfvl"]
+size = Vector3(1.1, 1.1, 1.1)
+
+[sub_resource type="Animation" id="Animation_huwr0"]
+resource_name = "PointAnimation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.26573, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hpv77"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2ayt"]
+_data = {
+"PointAnimation": SubResource("Animation_huwr0"),
+"RESET": SubResource("Animation_hpv77")
+}
+
+[node name="Point" type="CharacterBody3D" groups=["Point"]]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 9
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xfs77")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0230713, 0, 0)
+shape = SubResource("BoxShape3D_bbfvl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e2ayt")
+}
+autoplay = "PointAnimation"
