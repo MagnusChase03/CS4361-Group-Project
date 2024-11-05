@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+signal game_over
+signal collected_point
+
 @export var movement_speed: float = 6.0
 var direction: Vector3
 
@@ -19,10 +22,10 @@ func _physics_process(delta):
 	velocity = direction * movement_speed
 	move_and_slide()
 
-
 func _on_area_3d_body_entered(body: Node3D):
-	print(body)
 	if body.is_in_group("Enemy"):
+		game_over.emit()
 		queue_free()
 	if body.is_in_group("Point"):
+		collected_point.emit()
 		body.queue_free()
