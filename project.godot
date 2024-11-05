@@ -23,6 +23,7 @@ import/blender/enabled=false
 
 Enemy=""
 Point=""
+PowerUp=""
 
 [input]
 
