@@ -30,7 +30,7 @@ func _on_area_3d_body_entered(body: Node3D):
 		queue_free()
 	elif body.is_in_group("Enemy") and power_up:
 		eat_planet.emit()
-		body.queue_free()
+		body.die()
 	elif body.is_in_group("PowerUp"):
 		power_up = true
 		body.queue_free()

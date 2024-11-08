@@ -22,3 +22,9 @@ mesh = ExtResource("3_owrkf")
 shape = SubResource("SphereShape3D_17n5q")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
