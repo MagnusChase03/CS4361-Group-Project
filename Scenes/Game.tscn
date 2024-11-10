@@ -791,7 +791,7 @@ transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 
 [node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2"]
 
 [node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node" instance=ExtResource("2_7li1e")]
-transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -3.98676, 2.29615, 1.61341)
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -4.04486, 2.29615, 1.61341)
 
 [node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2"]
 
