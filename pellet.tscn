@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfaemsbkulob3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7dkv"]
+albedo_color = Color(1, 1, 0.176471, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_b1l14"]
+material = SubResource("StandardMaterial3D_y7dkv")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x3er1"]
+size = Vector3(1.00342, 1, 1)
+
+[node name="Pellet" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_b1l14")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0483553, -0.0616183, -0.0961456)
+shape = SubResource("BoxShape3D_x3er1")

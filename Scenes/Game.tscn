@@ -1,6 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://bi4tbxeviupfq"]
+[gd_scene load_steps=46 format=3 uid="uid://bi4tbxeviupfq"]
 
 [ext_resource type="PackedScene" uid="uid://fp2fa8rgba4r" path="res://Scenes/Mars.tscn" id="1_qiofs"]
+[ext_resource type="PackedScene" uid="uid://cfaemsbkulob3" path="res://pellet.tscn" id="2_7li1e"]
+[ext_resource type="Script" path="res://Scenes/node.gd" id="2_jah06"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0k1o1"]
 size = Vector3(21, 0.5, 22)
@@ -689,3 +691,684 @@ navigation_mesh = SubResource("NavigationMesh_ed86d")
 [node name="PlanetNavMesh" type="MeshInstance3D" parent="PlanetNavRegion"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 mesh = SubResource("PlaneMesh_dcaqm")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_jah06")
+
+[node name="MeshInstance3D" parent="Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -2.06098, 2.2717, 0)
+
+[node name="Node" type="Node" parent="Node"]
+
+[node name="Pellet" parent="Node/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 0.539045, 2.29615, 0)
+
+[node name="Node2" type="Node" parent="Node"]
+
+[node name="MeshInstance3D" parent="Node/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 7.62786, 2.30536, 0)
+
+[node name="Node" type="Node" parent="Node/Node2"]
+
+[node name="Pellet" parent="Node/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 6.28066, 2.29615, 0)
+
+[node name="Node3" type="Node" parent="Node"]
+
+[node name="MeshInstance3D" parent="Node/Node3" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 1.57918, 2.2717, 0)
+
+[node name="Node" type="Node" parent="Node/Node3"]
+
+[node name="Pellet" parent="Node/Node3/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 9.06723, 2.29615, 0)
+
+[node name="Node2" type="Node" parent="Node/Node3"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -0.861345, 2.30536, 0)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 4.95724, 2.29615, 0)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -4.02442, 2.30536, 0)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 4.95724, 2.29615, 0)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 3.98559, 2.30536, 2.12301)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 4.95724, 2.29615, -4.10268)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 3.98559, 2.30536, 1.1982)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 3.80758, 2.29615, -1.96861)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 3.98559, 2.30536, 0)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -3.98676, 2.29615, -1.96861)
+
+[node name="Node3" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 3.98559, 2.30536, -0.810155)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -2.19633, 2.29615, -1.96861)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -0.804982, 2.30536, -1.94299)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -3.98676, 2.29615, 1.61341)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 2.12098, 2.30536, -1.94299)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 0.579621, 2.29615, -2.01678)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 1.2021, 1.90242, -3.93217)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -2.19521, 2.29615, -6.04147)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 3.85821, 2.30536, -4.07408)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 5.5717, 2.29615, -6.11012)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 4.22505, 2.30536, -6.04139)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -0.560112, 2.29615, -6.11012)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 2.52765, 2.30536, -4.11913)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -8.88596, 2.29615, -4.07649)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -7.3229, 2.30536, -4.11913)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -1.42073, 2.29615, -4.07649)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -2.92576, 2.30536, -4.11913)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -8.64811, 2.29615, -0.217024)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -6.20705, 2.30536, -4.11913)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -5.03668, 2.29615, -3.91035)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 0.872453, 2.30536, -6.09712)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 2.51901, 2.29615, -5.83706)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 0.872453, 2.30536, 3.79483)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 3.85604, 2.29615, 4.2938)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 2.75851, 2.30536, 3.79483)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 1.09286, 2.29615, 8.06916)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 1.96327, 2.30536, 3.79483)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -0.728829, 2.29615, 6.27632)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -4.29136, 2.30536, 3.79483)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -9.11087, 2.29615, 3.82676)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -4.1212, 2.30536, -4.12581)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -1.36738, 2.29615, 3.82676)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -4.1212, 2.30536, 5.09672)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -1.12571, 2.29615, 8.65405)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -4.1212, 2.30536, -7.36064)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -1.12571, 2.29615, -10.1408)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -1.11757, 2.30536, 7.62205)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 8.82175, 2.29615, -10.1408)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -1.11757, 2.30536, -8.18863)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -8.81347, 2.29615, -10.1408)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -1.11757, 2.30536, 2.27504)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -8.81347, 2.29615, 8.78687)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 2.59364, 2.30536, 2.27504)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -6.3768, 2.29615, -7.9186)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -2.52911, 2.30536, 2.27504)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -6.3768, 2.29615, 8.94804)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -6.07167, 2.30536, 2.27504)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -6.3768, 2.29615, -2.55844)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -6.07167, 2.30536, 7.31078)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -6.3768, 2.29615, 4.07994)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -6.07167, 2.30536, -0.257302)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 8.69587, 2.29615, 4.10425)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -6.07167, 2.30536, -5.91067)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 8.17857, 2.29615, 8.99495)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -7.36909, 2.30536, -0.186281)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 6.14409, 2.29615, 8.83534)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -7.36909, 2.30536, 3.83516)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -8.99189, 2.29615, 5.91892)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 7.05955, 2.30536, 3.83516)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -7.19172, 2.29615, -9.98528)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 7.05955, 2.30536, -9.91381)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 5.11098, 2.29615, -9.98528)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -5.23231, 2.30536, -9.91381)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -3.28679, 2.29615, -9.98528)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 1.27325, 2.30536, -9.91381)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 2.72455, 2.29615, -9.98528)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 1.27325, 2.30536, -8.37573)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 3.84206, 2.29615, -8.32002)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 2.3014, 2.30536, -8.37573)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -2.68416, 2.29615, -8.32002)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 2.3014, 2.30536, 6.09775)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -7.24247, 2.29615, 6.04684)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -4.19744, 2.30536, 6.09775)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 3.7934, 2.29615, 6.04684)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 8.99905, 2.30536, 6.09775)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 6.13495, 2.29615, -8.0487)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 5.24841, 2.30536, 6.09775)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 6.28608, 2.29615, 6.07096)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 6.23704, 2.30536, 1.74388)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 9.09036, 2.29615, -3.99518)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 6.23704, 2.30536, 3.10088)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 9.09036, 2.29615, -1.87836)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -8.66678, 2.30536, 2.17193)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 9.09036, 2.29615, 2.2551)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -8.66678, 2.30536, -8.16508)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -6.2845, 2.29615, 2.2551)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -9.07508, 2.30536, -5.45793)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 9.10193, 2.29615, -8.03931)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -9.07508, 2.30536, 7.52914)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 1.05756, 2.29615, 6.49971)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -6.07157, 2.30536, 5.69336)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 3.08114, 2.29615, 9.05713)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -2.7033, 2.30536, 6.16571)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -8.16427, 2.29615, -6.29569)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -2.7033, 2.30536, 9.00669)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -4.48918, 2.29615, 9.10222)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 6.08913, 2.30536, -2.18456)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 9.01847, 2.29615, -6.19917)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 6.08913, 2.30536, -7.04159)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, 7.27122, 2.29615, -4.06131)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 6.08913, 2.30536, -4.11677)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.574862, 0, 0.81825, 0, 1, 0, -0.81825, 0, -0.574862, -8.65043, 2.29615, -2.06397)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 6.08913, 2.30536, 4.01279)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, -6.19272, 2.29615, -1.35)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 6.08913, 2.30536, 7.46632)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, 7.62546, 2.29615, 6.33955)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 9.13197, 2.30536, 7.46632)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, 7.5864, 2.29615, -8.10247)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 9.13197, 2.30536, 8.85151)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, 8.10194, 2.29615, -6.82547)
+
+[node name="Node3" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 9.13197, 2.30536, 7.46632)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, 8.1888, 2.29615, -5.88184)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -6.15447, 2.30536, 0.999243)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, -2.83093, 2.29615, 4.01464)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 3.82751, 2.30536, -9.96667)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, 4.74922, 2.29615, 9.18913)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, 1.1978, 2.30536, 9.1188)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, 3.96719, 2.29615, -3.17719)
+
+[node name="Node2" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2"]
+
+[node name="MeshInstance3D" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2" instance=ExtResource("2_7li1e")]
+transform = Transform3D(0.482963, -0.12941, 0, 0.12941, 0.482963, 0, 0, 0, 0.5, -4.26034, 2.30536, -8.22635)
+
+[node name="Node" type="Node" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2"]
+
+[node name="Pellet" parent="Node/Node3/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node2/Node3/Node2/Node2/Node2/Node2/Node" instance=ExtResource("2_7li1e")]
+transform = Transform3D(-0.287431, 0, 0.409125, 0, 0.5, 0, -0.409125, 0, -0.287431, -7.66902, 2.29615, -8.10943)
