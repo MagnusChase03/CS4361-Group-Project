@@ -39,6 +39,7 @@ func _on_area_3d_body_entered(body: Node3D):
 	elif body.is_in_group("Point"):
 		collected_point.emit()
 		body.queue_free()
+	
 
 func _on_power_up_timer_timeout():
 	power_up = false

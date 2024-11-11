@@ -1,7 +1,8 @@
-[gd_scene load_steps=71 format=3 uid="uid://bi4tbxeviupfq"]
+[gd_scene load_steps=73 format=3 uid="uid://bi4tbxeviupfq"]
 
 [ext_resource type="Texture2D" uid="uid://ccwwcyrryoery" path="res://Assets/Textures/pngwing.com.png" id="1_dsqtm"]
 [ext_resource type="PackedScene" uid="uid://fp2fa8rgba4r" path="res://Scenes/Mars.tscn" id="1_qiofs"]
+[ext_resource type="Script" path="res://Scenes/area_3d.gd" id="2_46twb"]
 [ext_resource type="PackedScene" uid="uid://dfivequ7xjtjv" path="res://Scenes/Saturn.tscn" id="2_fjb4x"]
 [ext_resource type="PackedScene" uid="uid://ctvw7f0oktpfe" path="res://Scenes/Neptune.tscn" id="3_hn8w3"]
 [ext_resource type="PackedScene" uid="uid://bc070y87hjr30" path="res://Scenes/CometMan.tscn" id="3_nm0kg"]
@@ -139,6 +140,8 @@ size = Vector3(1, 1, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qct63"]
 size = Vector3(1, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s8glv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8l0c8"]
 albedo_color = Color(0, 0, 0, 1)
@@ -499,6 +502,17 @@ mesh = SubResource("BoxMesh_bgtb8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01264, 0.988939, -5.00087)
 shape = SubResource("BoxShape3D_qct63")
 
+[node name="TeleportPosition" type="Marker3D" parent="Map/West Teleporter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -3)
+
+[node name="Area3D" type="Area3D" parent="Map/West Teleporter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -3)
+collision_layer = 16
+script = ExtResource("2_46twb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/West Teleporter/Area3D" groups=["Teleport"]]
+shape = SubResource("BoxShape3D_s8glv")
+
 [node name="East Teleporter" type="StaticBody3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 3)
 collision_layer = 8
@@ -551,6 +565,17 @@ mesh = SubResource("BoxMesh_bgtb8")
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="Map/East Teleporter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98736, 0.988939, -5.00087)
 shape = SubResource("BoxShape3D_qct63")
+
+[node name="TeleportPosition" type="Marker3D" parent="Map/East Teleporter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, -3)
+
+[node name="Area3D" type="Area3D" parent="Map/East Teleporter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -3)
+collision_layer = 16
+script = ExtResource("2_46twb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/East Teleporter/Area3D" groups=["Teleport"]]
+shape = SubResource("BoxShape3D_s8glv")
 
 [node name="I West" type="StaticBody3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2)
@@ -626,6 +651,8 @@ shape = SubResource("BoxShape3D_w8s7t")
 
 [node name="T South 1" type="StaticBody3D" parent="Map/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+collision_layer = 8
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/StaticBody3D/T South 1"]
