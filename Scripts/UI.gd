@@ -11,3 +11,11 @@ func _on_comet_man_collected_point():
 
 func _on_comet_man_eat_planet():
 	update_score(100)
+
+
+func _on_comet_man_game_over() -> void:
+	$GameOver.show()
+
+
+func _on_restart_pressed() -> void:
+	get_tree().reload_current_scene()

@@ -1,11 +1,13 @@
-[gd_scene load_steps=69 format=3 uid="uid://bi4tbxeviupfq"]
+[gd_scene load_steps=71 format=3 uid="uid://bi4tbxeviupfq"]
 
-[ext_resource type="Texture2D" uid="uid://ccwwcyrryoery" path="res://Assets/pngwing.com.png" id="1_dsqtm"]
+[ext_resource type="Texture2D" uid="uid://ccwwcyrryoery" path="res://Assets/Textures/pngwing.com.png" id="1_dsqtm"]
 [ext_resource type="PackedScene" uid="uid://fp2fa8rgba4r" path="res://Scenes/Mars.tscn" id="1_qiofs"]
 [ext_resource type="PackedScene" uid="uid://dfivequ7xjtjv" path="res://Scenes/Saturn.tscn" id="2_fjb4x"]
 [ext_resource type="PackedScene" uid="uid://ctvw7f0oktpfe" path="res://Scenes/Neptune.tscn" id="3_hn8w3"]
 [ext_resource type="PackedScene" uid="uid://bc070y87hjr30" path="res://Scenes/CometMan.tscn" id="3_nm0kg"]
 [ext_resource type="PackedScene" uid="uid://dnw7fybhljrl6" path="res://Scenes/UI.tscn" id="4_67jn5"]
+[ext_resource type="PackedScene" uid="uid://d1v3fp6ua8m5c" path="res://Scenes/Point.tscn" id="5_f4xca"]
+[ext_resource type="PackedScene" uid="uid://vd4vpwxccx7e" path="res://Scenes/PowerUp.tscn" id="6_cd23t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84hp8"]
 albedo_texture = ExtResource("1_dsqtm")
@@ -822,8 +824,54 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6.12581, 0.878014, 3.94
 movement_target_position = NodePath("../../CometMan")
 spawn_point = NodePath("../Spawn")
 
+[node name="Points" type="Node3D" parent="."]
+
+[node name="Point" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, 8.81757, 0.68969, -9.99493)
+
+[node name="Point2" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, 7.22637, 0.68969, -10.0553)
+
+[node name="Point3" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, 5.82844, 0.68969, -10.0553)
+
+[node name="Point4" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, 4.38278, 0.68969, -10.0553)
+
+[node name="Point5" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, 2.89023, 0.68969, -10.0553)
+
+[node name="Point6" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, 1.32258, 0.68969, -10.0553)
+
+[node name="Point7" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -0.24495, 0.68969, -10.0553)
+
+[node name="Point8" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -1.74366, 0.68969, -10.0553)
+
+[node name="Point9" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -3.22501, 0.68969, -10.0553)
+
+[node name="Point10" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -4.79373, 0.68969, -10.0553)
+
+[node name="Point11" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -6.39243, 0.676516, -10.1157)
+
+[node name="Point12" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -7.8934, 0.68969, -10.0553)
+
+[node name="Point13" parent="Points" instance=ExtResource("5_f4xca")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -9.01314, 0.68969, -10.0553)
+
+[node name="PowerUp" type="Node3D" parent="."]
+
+[node name="PowerUp" parent="PowerUp" instance=ExtResource("6_cd23t")]
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -1.05799, 0.68969, -7.99308)
+
 [node name="CometMan" parent="." instance=ExtResource("3_nm0kg")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.88969, -5.96736)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.88969, -5.96736)
 
 [node name="UI" parent="." instance=ExtResource("4_67jn5")]
 
@@ -837,3 +885,4 @@ mesh = SubResource("PlaneMesh_kgubw")
 
 [connection signal="collected_point" from="CometMan" to="UI" method="_on_comet_man_collected_point"]
 [connection signal="eat_planet" from="CometMan" to="UI" method="_on_comet_man_eat_planet"]
+[connection signal="game_over" from="CometMan" to="UI" method="_on_comet_man_game_over"]

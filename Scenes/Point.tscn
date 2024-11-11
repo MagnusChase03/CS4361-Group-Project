@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1v3fp6ua8m5c"]
+[gd_scene load_steps=7 format=3 uid="uid://d1v3fp6ua8m5c"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_xfs77"]
+[ext_resource type="ArrayMesh" uid="uid://b2lcs12g4k8ea" path="res://Assets/Obj/Star.obj" id="1_51g5h"]
+[ext_resource type="Material" uid="uid://clfxae1y4xork" path="res://Assets/Materials/Star.tres" id="1_5100d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbfvl"]
-size = Vector3(1.1, 1.1, 1.1)
+size = Vector3(1.91628, 1.1, 1.81699)
 
 [sub_resource type="Animation" id="Animation_huwr0"]
 resource_name = "PointAnimation"
@@ -43,16 +44,17 @@ _data = {
 }
 
 [node name="Point" type="CharacterBody3D" groups=["Point"]]
-transform = Transform3D(1, 0, 4.46638e-06, 0, 1, 0, -4.46638e-06, 0, 1, 0, 0, 0)
+transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, 0, 0, 0)
 collision_layer = 2
 collision_mask = 9
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_xfs77")
+material_override = ExtResource("1_5100d")
+mesh = ExtResource("1_51g5h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0230713, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00108941, 0, -0.0901368)
 shape = SubResource("BoxShape3D_bbfvl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
