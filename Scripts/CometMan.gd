@@ -33,6 +33,7 @@ func _on_area_3d_body_entered(body: Node3D):
 		body.die()
 	elif body.is_in_group("PowerUp"):
 		power_up = true
+		$PowerUpParticle.show()
 		body.queue_free()
 		$PowerUpTimer.start()
 	elif body.is_in_group("Point"):
@@ -41,3 +42,4 @@ func _on_area_3d_body_entered(body: Node3D):
 
 func _on_power_up_timer_timeout():
 	power_up = false
+	$PowerUpParticle.hide()

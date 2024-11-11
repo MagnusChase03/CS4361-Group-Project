@@ -871,7 +871,7 @@ transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -9
 transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -1.05799, 0.68969, -7.99308)
 
 [node name="CometMan" parent="." instance=ExtResource("3_nm0kg")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.88969, -5.96736)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.88969, -5.96736)
 
 [node name="UI" parent="." instance=ExtResource("4_67jn5")]
 
