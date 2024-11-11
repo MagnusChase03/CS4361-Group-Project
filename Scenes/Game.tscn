@@ -837,3 +837,4 @@ mesh = SubResource("PlaneMesh_kgubw")
 
 [connection signal="collected_point" from="CometMan" to="UI" method="_on_comet_man_collected_point"]
 [connection signal="eat_planet" from="CometMan" to="UI" method="_on_comet_man_eat_planet"]
+[connection signal="game_over" from="CometMan" to="UI" method="_on_comet_man_game_over"]

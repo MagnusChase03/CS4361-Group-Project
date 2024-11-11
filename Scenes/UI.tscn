@@ -1,12 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnw7fybhljrl6"]
+[gd_scene load_steps=3 format=3 uid="uid://dnw7fybhljrl6"]
 
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_vjgug"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_jqt2j"]
+font_size = 64
+font_color = Color(1, 0, 0, 1)
+
 [node name="UI" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_vjgug")
 
 [node name="Score" type="Label" parent="."]
@@ -16,3 +22,47 @@ offset_top = 20.0
 offset_right = 81.0
 offset_bottom = 43.0
 text = "Score: 0"
+
+[node name="GameOver" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.5
+offset_top = -44.0
+offset_right = 173.5
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_jqt2j")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" type="Button" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = 40.0
+offset_right = 32.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Restart"
+
+[connection signal="button_up" from="GameOver/Restart" to="." method="_on_restart_pressed"]
