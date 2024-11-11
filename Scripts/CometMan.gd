@@ -13,13 +13,13 @@ func _ready():
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("up"):
-		direction = Vector3(0, 0, -1)
-	elif Input.is_action_just_pressed("down"):
 		direction = Vector3(0, 0, 1)
+	elif Input.is_action_just_pressed("down"):
+		direction = Vector3(0, 0, -1)
 	elif Input.is_action_just_pressed("right"):
-		direction = Vector3(1, 0, 0)
-	elif Input.is_action_just_pressed("left"):
 		direction = Vector3(-1, 0, 0)
+	elif Input.is_action_just_pressed("left"):
+		direction = Vector3(1, 0, 0)
 	
 	velocity = direction * movement_speed
 	move_and_slide()
@@ -30,7 +30,7 @@ func _on_area_3d_body_entered(body: Node3D):
 		queue_free()
 	elif body.is_in_group("Enemy") and power_up:
 		eat_planet.emit()
-		body.queue_free()
+		body.die()
 	elif body.is_in_group("PowerUp"):
 		power_up = true
 		body.queue_free()

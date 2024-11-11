@@ -9,7 +9,7 @@ radius = 1.02081
 
 [node name="Neptune" type="CharacterBody3D" groups=["Enemy"]]
 collision_layer = 4
-collision_mask = 9
+collision_mask = 13
 script = ExtResource("1_cxqcu")
 movement_speed = 4.0
 metadata/_edit_group_ = true
@@ -22,3 +22,9 @@ mesh = ExtResource("3_owrkf")
 shape = SubResource("SphereShape3D_17n5q")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
