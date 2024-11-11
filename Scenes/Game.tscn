@@ -1,6 +1,6 @@
 [gd_scene load_steps=69 format=3 uid="uid://bi4tbxeviupfq"]
 
-[ext_resource type="Texture2D" uid="uid://ccwwcyrryoery" path="res://pngwing.com.png" id="1_dsqtm"]
+[ext_resource type="Texture2D" uid="uid://ccwwcyrryoery" path="res://Assets/pngwing.com.png" id="1_dsqtm"]
 [ext_resource type="PackedScene" uid="uid://fp2fa8rgba4r" path="res://Scenes/Mars.tscn" id="1_qiofs"]
 [ext_resource type="PackedScene" uid="uid://dfivequ7xjtjv" path="res://Scenes/Saturn.tscn" id="2_fjb4x"]
 [ext_resource type="PackedScene" uid="uid://ctvw7f0oktpfe" path="res://Scenes/Neptune.tscn" id="3_hn8w3"]
