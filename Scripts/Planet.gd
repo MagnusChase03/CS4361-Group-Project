@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var movement_speed: float = 2.0
+@export var movement_speed: float = 4.0
 @export var movement_target_position: Node3D
 @export var spawn_point: Node3D
 
@@ -39,5 +39,5 @@ func _physics_process(delta):
 
 
 func _on_timer_timeout() -> void:
-	movement_speed = 2.0
+	movement_speed = 4.0
 	show()
