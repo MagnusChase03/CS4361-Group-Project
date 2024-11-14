@@ -1,6 +1,7 @@
 extends Control
 
 var score: int = 0
+signal quit
 
 func update_score(points):
 	score += points
@@ -19,3 +20,7 @@ func _on_comet_man_game_over() -> void:
 
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_quit_button_up() -> void:
+	quit.emit()

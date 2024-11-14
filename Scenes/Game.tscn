@@ -1,5 +1,6 @@
-[gd_scene load_steps=71 format=3 uid="uid://bi4tbxeviupfq"]
+[gd_scene load_steps=72 format=3 uid="uid://bi4tbxeviupfq"]
 
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_20f7j"]
 [ext_resource type="Texture2D" uid="uid://ccwwcyrryoery" path="res://Assets/Textures/pngwing.com.png" id="1_dsqtm"]
 [ext_resource type="PackedScene" uid="uid://fp2fa8rgba4r" path="res://Scenes/Mars.tscn" id="1_qiofs"]
 [ext_resource type="PackedScene" uid="uid://dfivequ7xjtjv" path="res://Scenes/Saturn.tscn" id="2_fjb4x"]
@@ -216,6 +217,7 @@ cell_size = 0.5
 
 [node name="Game" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_20f7j")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 3.52514e-15, 3.58008e-15, -3.55271e-15, -0.0077318, 0.99997, 3.55271e-15, -0.99997, -0.0077318, -1.7053e-13, 14.824, 9.53674e-07)
@@ -1120,295 +1122,295 @@ transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -1
 transform = Transform3D(0.4, 0, 1.78655e-06, 0, 0.4, 0, -1.78655e-06, 0, 0.4, -1.02243, 0.68969, -9.09671)
 
 [node name="Point103" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05756, 0.68969, -10.0553)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05756, 0.68969, -10.0553)
 
 [node name="Point104" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.04717, 0.68969, -10.0553)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.04717, 0.68969, -10.0553)
 
 [node name="Point105" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.07498, 0.68969, -10.0553)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.07498, 0.68969, -10.0553)
 
 [node name="Point106" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.0836, 0.676516, -10.1157)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.0836, 0.676516, -10.1157)
 
 [node name="Point107" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.99331, 0.676516, -10.1157)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.99331, 0.676516, -10.1157)
 
 [node name="Point108" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.00137, 0.676516, -10.1157)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.00137, 0.676516, -10.1157)
 
 [node name="Point109" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.91108, 0.676516, -10.1157)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.91108, 0.676516, -10.1157)
 
 [node name="Point110" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.92032, 0.68969, -10.0553)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.92032, 0.68969, -10.0553)
 
 [node name="Point111" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04006, 0.68969, -10.0553)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04006, 0.68969, -10.0553)
 
 [node name="Point112" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04006, 0.68969, -8.85084)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04006, 0.68969, -8.85084)
 
 [node name="Point113" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04006, 0.68969, -7.94113)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04006, 0.68969, -7.94113)
 
 [node name="Point114" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.93365, 0.68969, -7.94113)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.93365, 0.68969, -7.94113)
 
 [node name="Point115" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.93365, 0.68969, -6.98224)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.93365, 0.68969, -6.98224)
 
 [node name="Point116" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.93365, 0.68969, -6.04794)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.93365, 0.68969, -6.04794)
 
 [node name="Point117" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04005, 0.68969, -4.99071)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04005, 0.68969, -4.99071)
 
 [node name="Point118" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04005, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04005, 0.68969, -4.03182)
 
 [node name="Point119" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.08117, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.08117, 0.68969, -4.03182)
 
 [node name="Point120" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.95018, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.95018, 0.68969, -4.03182)
 
 [node name="Point121" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.89294, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.89294, 0.68969, -4.03182)
 
 [node name="Point122" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.90947, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.90947, 0.68969, -4.03182)
 
 [node name="Point123" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.85224, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.85224, 0.68969, -4.03182)
 
 [node name="Point124" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.86877, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.86877, 0.68969, -4.03182)
 
 [node name="Point125" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.95905, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.95905, 0.68969, -4.03182)
 
 [node name="Point126" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.02476, 0.68969, -4.03182)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.02476, 0.68969, -4.03182)
 
 [node name="Point127" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.02476, 0.68969, -4.89236)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.02476, 0.68969, -4.89236)
 
 [node name="Point128" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.02476, 0.68969, -5.9496)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.02476, 0.68969, -5.9496)
 
 [node name="Point129" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.00823, 0.68969, -5.9496)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.00823, 0.68969, -5.9496)
 
 [node name="Point130" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.91794, 0.68969, -5.9496)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.91794, 0.68969, -5.9496)
 
 [node name="Point131" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.03514, 0.68969, -2.93527)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.03514, 0.68969, -2.93527)
 
 [node name="Point132" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.03514, 0.68969, -1.92346)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.03514, 0.68969, -1.92346)
 
 [node name="Point133" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.00225, 0.68969, -1.92346)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.00225, 0.68969, -1.92346)
 
 [node name="Point134" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.03261, 0.68969, -1.92346)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.03261, 0.68969, -1.92346)
 
 [node name="Point135" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.14728, 0.68969, -1.92346)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.14728, 0.68969, -1.92346)
 
 [node name="Point136" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01658, 0.68969, -1.92346)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01658, 0.68969, -1.92346)
 
 [node name="Point137" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01658, 0.68969, -2.91419)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01658, 0.68969, -2.91419)
 
 [node name="Point138" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01658, 0.68969, -1.03814)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01658, 0.68969, -1.03814)
 
 [node name="Point139" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.14053, 0.68969, -1.03814)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.14053, 0.68969, -1.03814)
 
 [node name="Point202" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.94334, 0.68969, 9.0638)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.94334, 0.68969, 9.0638)
 
 [node name="Point203" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, -4.9579, 0.68969, 9.0638)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, -4.9579, 0.68969, 9.0638)
 
 [node name="Point140" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.14053, 0.68969, 0.0369039)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.14053, 0.68969, 0.0369039)
 
 [node name="Point141" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.13126, 0.68969, 0.0369039)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.13126, 0.68969, 0.0369039)
 
 [node name="Point142" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.07982, 0.68969, 0.0369039)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.07982, 0.68969, 0.0369039)
 
 [node name="Point143" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.07982, 0.68969, 1.13302)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.07982, 0.68969, 1.13302)
 
 [node name="Point144" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.0773, 0.68969, 1.13302)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.0773, 0.68969, 1.13302)
 
 [node name="Point145" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.0773, 0.68969, 1.99356)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.0773, 0.68969, 1.99356)
 
 [node name="Point146" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.99548, 0.68969, 1.99356)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.99548, 0.68969, 1.99356)
 
 [node name="Point147" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.98742, 0.68969, 1.99356)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.98742, 0.68969, 1.99356)
 
 [node name="Point148" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 1.99356)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 1.99356)
 
 [node name="Point149" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 3.09997)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 3.09997)
 
 [node name="Point150" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 4.03427)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 4.03427)
 
 [node name="Point151" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.012, 0.68969, 4.03427)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.012, 0.68969, 4.03427)
 
 [node name="Point152" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.97089, 0.68969, 4.03427)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.97089, 0.68969, 4.03427)
 
 [node name="Point153" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.02812, 0.68969, 4.03427)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.02812, 0.68969, 4.03427)
 
 [node name="Point154" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.02812, 0.68969, 5.14068)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.02812, 0.68969, 5.14068)
 
 [node name="Point155" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01966, 0.68969, 2.04274)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01966, 0.68969, 2.04274)
 
 [node name="Point156" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01966, 0.68969, 3.02621)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01966, 0.68969, 3.02621)
 
 [node name="Point157" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01966, 0.68969, 4.00968)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.01966, 0.68969, 4.00968)
 
 [node name="Point158" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.88019, 0.68969, 4.00968)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.88019, 0.68969, 4.00968)
 
 [node name="Point159" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.78991, 0.68969, 4.00968)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.78991, 0.68969, 4.00968)
 
 [node name="Point160" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.94549, 0.68969, 4.00968)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.94549, 0.68969, 4.00968)
 
 [node name="Point161" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.94549, 0.68969, 4.99316)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.94549, 0.68969, 4.99316)
 
 [node name="Point162" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.94549, 0.68969, 5.92745)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.94549, 0.68969, 5.92745)
 
 [node name="Point163" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.06036, 0.68969, 5.92745)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.06036, 0.68969, 5.92745)
 
 [node name="Point164" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.15065, 0.68969, 5.92745)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.15065, 0.68969, 5.92745)
 
 [node name="Point165" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 5.92745)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 5.92745)
 
 [node name="Point166" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 5.0915)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 5.0915)
 
 [node name="Point167" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 7.05845)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 7.05845)
 
 [node name="Point168" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 8.11568)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 8.11568)
 
 [node name="Point169" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 9.02539)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.94589, 0.68969, 9.02539)
 
 [node name="Point170" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.22441, 0.68969, 9.02539)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 7.22441, 0.68969, 9.02539)
 
 [node name="Point171" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.18329, 0.68969, 9.02539)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 8.18329, 0.68969, 9.02539)
 
 [node name="Point172" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04383, 0.68969, 9.02539)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04383, 0.68969, 9.02539)
 
 [node name="Point173" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04383, 0.68969, 8.06651)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 9.04383, 0.68969, 8.06651)
 
 [node name="Point174" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.10229, 0.68969, 8.06651)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.10229, 0.68969, 8.06651)
 
 [node name="Point175" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.10229, 0.68969, 9.09915)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.10229, 0.68969, 9.09915)
 
 [node name="Point176" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.28246, 0.68969, 9.09915)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.28246, 0.68969, 9.09915)
 
 [node name="Point177" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.29052, 0.68969, 9.09915)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.29052, 0.68969, 9.09915)
 
 [node name="Point178" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.12647, 0.68969, 9.09915)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.12647, 0.68969, 9.09915)
 
 [node name="Point179" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.88866, 0.68969, 6.09956)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.88866, 0.68969, 6.09956)
 
 [node name="Point180" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.02812, 0.68969, 6.09956)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.02812, 0.68969, 6.09956)
 
 [node name="Point181" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.97089, 0.68969, 6.09956)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 2.97089, 0.68969, 6.09956)
 
 [node name="Point182" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.96283, 0.68969, 6.09956)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.96283, 0.68969, 6.09956)
 
 [node name="Point183" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 6.09956)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 6.09956)
 
 [node name="Point184" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 7.03386)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.05312, 0.68969, 7.03386)
 
 [node name="Point185" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.92559, 0.68969, -7.94113)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 6.92559, 0.68969, -7.94113)
 
 [node name="Point186" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -7.94113)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -7.94113)
 
 [node name="Point187" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -6.93307)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -6.93307)
 
 [node name="Point188" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -5.97418)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -5.97418)
 
 [node name="Point189" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -4.94154)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 5.99129, 0.68969, -4.94154)
 
 [node name="Point190" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.88488, 0.68969, -5.92501)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 4.88488, 0.68969, -5.92501)
 
 [node name="Point191" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.95059, 0.68969, -5.92501)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.95059, 0.68969, -5.92501)
 
 [node name="Point192" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.95059, 0.68969, -6.93307)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.95059, 0.68969, -6.93307)
 
 [node name="Point193" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.95059, 0.68969, -7.96572)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.95059, 0.68969, -7.96572)
 
 [node name="Point194" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.01629, 0.68969, -7.96572)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 3.01629, 0.68969, -7.96572)
 
 [node name="Point195" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.90988, 0.68969, -7.96572)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.90988, 0.68969, -7.96572)
 
 [node name="Point196" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.04934, 0.68969, -7.96572)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.04934, 0.68969, -7.96572)
 
 [node name="Point197" parent="Points" instance=ExtResource("5_f4xca")]
-transform = Transform3D(-0.4, 0, -1.78654e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.04934, 0.68969, -9.09671)
+transform = Transform3D(-0.4, 0, -1.78653e-06, 0, -0.4, 0, 1.78655e-06, 0, -0.399996, 1.04934, 0.68969, -9.09671)
 
 [node name="PowerUp" type="Node3D" parent="."]
 
@@ -1444,3 +1446,4 @@ mesh = ExtResource("9_fhj3m")
 [connection signal="collected_point" from="CometMan" to="UI" method="_on_comet_man_collected_point"]
 [connection signal="eat_planet" from="CometMan" to="UI" method="_on_comet_man_eat_planet"]
 [connection signal="game_over" from="CometMan" to="UI" method="_on_comet_man_game_over"]
+[connection signal="quit" from="UI" to="." method="_on_ui_quit"]
