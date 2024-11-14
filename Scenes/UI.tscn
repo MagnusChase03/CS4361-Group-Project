@@ -15,14 +15,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjgug")
 
-[node name="Score" type="Label" parent="."]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 81.0
-offset_bottom = 43.0
-text = "Score: 0"
-
 [node name="GameOver" type="Control" parent="."]
 visible = false
 layout_mode = 1
@@ -73,5 +65,13 @@ offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Restart"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 81.0
+offset_bottom = 43.0
+text = "Score: 0"
 
 [connection signal="button_up" from="GameOver/Restart" to="." method="_on_restart_pressed"]
